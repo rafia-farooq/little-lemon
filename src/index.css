@@ -1,25 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=MuseoModerno:ital,wght@0,100..900;1,100..900&family=Oxygen:wght@300;400;700&display=swap');
-
-
-
 body {
   margin: 0;
-  font-family:'Oxygen','MuseoModerno', sans-serif;
+  font-family:'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:'Courier New', monospace;
-}
-
 h1 {
-  font-family: 'Oxygen';
+  font-family: 'Markazi';
   font-weight: bold;
   font-size: 40px;
 }
 p {
-  font-family: 'MuseoModerno';
   font-size: 18px;
 }
