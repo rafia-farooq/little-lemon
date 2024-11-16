@@ -5,9 +5,9 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'; /
 
 const Testimonials = () => {
     return (
-        <section>
-            <h2>Testimonials</h2>
-            <div>
+        <section class="py-10 reviews">
+            <h2 class="text-center">Testimonials</h2>
+            <div class="flex w-3/4 my-0 mx-auto">
                 {Reviews.map((item, index) => {
                     const { stars, customerName, imageUrl, review } = item;
 

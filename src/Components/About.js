@@ -1,7 +1,7 @@
 const About = () => {
     return (
-        <section>
-            <div>
+        <section class="py-10 flex w-3/4 my-0 mx-auto">
+            <div class="w-1/3">
             <h1>Little Lemon</h1>
             <h3>Chicago</h3>
             <p>Little Lemon is a vibrant Mediterranean restaurant founded by Mario and Adrian, 

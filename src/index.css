@@ -1,3 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Color variables */
+
+@layer base {
+  :root {
+    --color-primary: rgb(49 75 41);
+    --color-secondary: yellow;
+    /* ... */
+  }
+}
+
 body {
   margin: 0;
   font-family:'Karla', sans-serif;
@@ -12,4 +26,20 @@ h1 {
 }
 p {
   font-size: 18px;
+}
+
+/* Hero section of Homepage */
+.hero {
+  background: var(--color-primary);
+}
+
+/* Testimonials section */
+.reviews {
+  background: var(--color-secondary);
+}
+
+/* Footer */
+
+.footer {
+  background: var(--color-primary);
 }
