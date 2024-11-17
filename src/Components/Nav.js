@@ -2,12 +2,14 @@ import Logo from '../assets/icons/logo.svg';
 
 const Nav = () => {
     return (
-      <header class="flex justify-between py-5 items-center w-3/4 my-0 mx-auto">
+      <header class="py-5 md:flex md:justify-between md:items-center w-3/4 my-0 mx-auto">
         <div>
-          <img src={Logo} alt="logo" />
+          <a href="/">
+            <img src={Logo} alt="logo" />
+          </a>
         </div>
         <nav class="w-1/2">
-          <ul class="flex justify-evenly">
+          <ul class="md:flex md:justify-evenly">
             <li>
               <a>Home</a>
             </li>

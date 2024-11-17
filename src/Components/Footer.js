@@ -1,4 +1,3 @@
-import Logo from '../assets/icons/logo.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram, faThreads, faXTwitter } from '@fortawesome/free-brands-svg-icons'; // Import the faPersonBiking icon
 
@@ -6,10 +5,10 @@ import { faFacebookF, faInstagram, faThreads, faXTwitter } from '@fortawesome/fr
 
 const Footer = () => {
     return (
-        <footer class="footer py-10">
-          <div class="flex justify-between w-3/4 my-0 mx-auto">{/*---- wrapper -----*/}
+        <footer class="footer py-10 text-center md:text-left">
+          <div class="md:flex md:justify-between w-3/4 my-0 mx-auto">{/*---- wrapper -----*/}
             <section>
-              <img src={Logo} alt="logo"/>
+              <img src={require('../assets/icons/white-logo.png')} alt="logo" class="w-[50%]"/>
             </section>
             <section>
               <h4>Menu</h4>
@@ -41,7 +40,7 @@ const Footer = () => {
               <p>little-lemon@mail.com</p>
             </section>
             <section>
-              <h4>Follow Us on Social Media</h4>
+              <h4 class="text-center">Follow Us on Social Media</h4>
               <div class="flex justify-evenly my-4">
                 <FontAwesomeIcon icon={faFacebookF}/>
                 <FontAwesomeIcon icon={faInstagram} />
