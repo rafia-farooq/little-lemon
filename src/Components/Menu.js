@@ -1,36 +1,35 @@
 import MenuList from '../Data/MenuList'; 
-import basket from '../assets/icons/basket.svg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPersonBiking } from '@fortawesome/free-solid-svg-icons'; // Import the faPersonBiking icon
+import { faPersonBiking, faCartPlus } from '@fortawesome/free-solid-svg-icons'; // Import the faPersonBiking icon
 
 const Menu = () => {
   return (
-    <section>
-      <div class="md:flex md:justify-between w-3/4 md:my-20 mx-auto py-10">
-        <h2>This week's specials!</h2>
-        <button class="hidden md:block">Online Menu</button>
+    <section className="py-10 mb-8">
+      <div className="md:flex md:justify-between w-3/4 md:my-20 mx-auto">
+        <h1>This week's specials!</h1>
+        <a className="hidden button hover:!bg-[#ffe252] shadow-xl">Online Menu</a>
       </div>
-      <div class="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 w-3/4 my-4 mx-auto">
+      <div className="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 w-3/4 my-4 mx-auto">
         {MenuList.map((item, index) => {
-        // Destructuring item to extract the dish and other properties
-        const { dish, price, imageUrl, description } = item;
+          // Destructuring item to extract the dish and other properties
+          const { dish, price, imageUrl, description } = item;
 
-        return (
-          <article key={index} class="shadow-lg rounded-lg p-3">
-            <img src={imageUrl} alt={dish} class="w-full h-[30vh] object-cover rounded-t-xl"/>
-            <div class="flex justify-between">
-              <h4>{dish}</h4>
-              <p>{price}</p>
-            </div>
-            <p>{description}</p>
-            <div class="flex justify-between">
-              <div>
-                <a href="#">Order a delivery</a>
-                <FontAwesomeIcon icon={faPersonBiking}/>
-              </div>
-              <a href="#"><img src={basket} alt="basket icon"/></a>
-            </div>
-          </article>
+          return (
+            <article key={index} className="shadow-lg rounded-lg flex flex-col h-full">
+              <img src={imageUrl} alt={dish} className="w-full h-[30vh] object-cover rounded-t-xl" />
+              <div className="flex flex-col justify-between flex-grow p-3 bg-emerald-50"> {/*wrapper div for content under the image*/}
+                <div className="flex justify-between my-5">{/*wrapper div for name and price*/}
+                  <h5>{dish}</h5>
+                  <p className='price'>{price}</p>
+                </div>{/*end of wrapper div for name and price*/}
+                <p className='mb-7'>{description}</p>
+                <div className="flex justify-between items-end mt-auto">{/*wrapper div for buttons*/}
+                  <a href="#" className="button-secondary">Order Delivery <FontAwesomeIcon icon={faPersonBiking} /></a>
+                  <a href="#" className="button-secondary">Add to Cart <FontAwesomeIcon icon={faCartPlus} /></a>
+                </div>{/*wrapper div for buttons*/}
+              </div>{/*end of wrapper div for content under the image*/}
+              
+            </article>
           );
         })}
       </div>

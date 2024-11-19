@@ -11,22 +11,22 @@ const Nav = () => {
         <nav class="w-1/2">
           <ul class="md:flex md:justify-evenly">
             <li>
-              <a>Home</a>
+              <a href='/'>Home</a>
             </li>
             <li>
-              <a>About</a>
+              <a href='#'>About</a>
             </li>
             <li>
-              <a>Reservation</a>
+              <a href='#'>Reservation</a>
             </li>
             <li>
-              <a>Menu</a>
+              <a href='#'>Menu</a>
             </li>
             <li>
-              <a>Order Online</a>
+              <a href='#'>Order Online</a>
             </li>
             <li>
-              <a>Login</a>
+              <a href='#'>Login</a>
             </li>
           </ul>
         </nav>
