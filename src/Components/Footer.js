@@ -5,13 +5,13 @@ import { faFacebookF, faInstagram, faThreads, faXTwitter } from '@fortawesome/fr
 
 const Footer = () => {
     return (
-        <footer class="footer py-10 text-center md:text-left">
-          <div class="md:flex md:justify-between w-3/4 my-0 mx-auto">{/*---- wrapper -----*/}
+        <footer className="py-10 text-center md:text-left">
+          <div className="md:flex md:justify-between w-3/4 my-0 mx-auto">{/*---- wrapper -----*/}
             <section>
-              <img src={require('../assets/icons/white-logo.png')} alt="logo" class="w-[50%]"/>
+              <img src={require('../assets/icons/white-green-square-logo.png')} alt="logo" class="w-2/3"/>
             </section>
             <section>
-              <h4>Menu</h4>
+              <h3>Menu</h3>
               <ul>
                 <li>
                   <a href='#'>Home</a>
@@ -34,18 +34,18 @@ const Footer = () => {
               </ul>
             </section>
             <section>
-              <h4>Contact</h4>
+              <h3>Contact</h3>
               <p>Address</p>
               <p>+9127731</p>
               <p>little-lemon@mail.com</p>
             </section>
             <section>
-              <h4 class="text-center">Follow Us on Social Media</h4>
-              <div class="flex justify-evenly my-4">
-                <FontAwesomeIcon icon={faFacebookF}/>
-                <FontAwesomeIcon icon={faInstagram} />
-                <FontAwesomeIcon icon={faThreads} />
-                <FontAwesomeIcon icon={faXTwitter} />
+              <h3 className="text-center">Follow Us on Social Media</h3>
+              <div className="flex justify-evenly my-4">
+                <FontAwesomeIcon icon={faFacebookF} className='icon'/>
+                <FontAwesomeIcon icon={faInstagram} className='icon'/>
+                <FontAwesomeIcon icon={faThreads} className='icon'/>
+                <FontAwesomeIcon icon={faXTwitter} className='icon'/>
               </div>
             </section>
           </div>{/*----end of wrapper-----*/}

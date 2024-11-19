@@ -24,8 +24,8 @@ const Menu = () => {
                 </div>{/*end of wrapper div for name and price*/}
                 <p className='mb-7'>{description}</p>
                 <div className="flex justify-between items-end mt-auto">{/*wrapper div for buttons*/}
-                  <a href="#" className="button-secondary">Order Delivery <FontAwesomeIcon icon={faPersonBiking} /></a>
-                  <a href="#" className="button-secondary">Add to Cart <FontAwesomeIcon icon={faCartPlus} /></a>
+                  <a href="#" className="button-secondary hover:!bg-[#ee9972]">Order Delivery <FontAwesomeIcon icon={faPersonBiking} /></a>
+                  <a href="#" className="button-secondary hover:!bg-[#ee9972]">Add to Cart <FontAwesomeIcon icon={faCartPlus} /></a>
                 </div>{/*wrapper div for buttons*/}
               </div>{/*end of wrapper div for content under the image*/}
               
