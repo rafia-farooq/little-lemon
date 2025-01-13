@@ -1,11 +1,17 @@
-import Main from './Main';
+import Hero from './Hero';
+import Menu from './Menu';
+import Testimonials from './Testimonials';
+import About from './About';
 
-function Homepage() {
-  return (
-    <>
-      <Main></Main>
-    </>
-  );
+const Homepage = () => {
+    return(
+        <main>
+            <Hero></Hero>
+            <Menu></Menu>
+            <Testimonials></Testimonials>
+            <About></About>
+        </main>
+    )
 }
 
 export default Homepage;

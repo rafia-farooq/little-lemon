@@ -127,3 +127,9 @@ footer h3 {
 footer li:hover, footer .icon:hover {
   color: var(--peach);
 }
+
+/* Booking page */
+
+header {
+  color: var(--green);
+}
