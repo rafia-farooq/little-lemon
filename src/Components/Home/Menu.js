@@ -1,4 +1,4 @@
-import MenuList from '../Data/MenuList'; 
+import MenuList from '../../Data/MenuList'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonBiking, faCartPlus } from '@fortawesome/free-solid-svg-icons'; // Import the faPersonBiking icon
 

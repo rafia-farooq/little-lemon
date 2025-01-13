@@ -1,4 +1,7 @@
 import Logo from '../assets/icons/logo.svg';
+// for navigation
+import { Link } from 'react-router';
+
 
 const Nav = () => {
     return (
@@ -11,22 +14,22 @@ const Nav = () => {
         <nav class="w-1/2">
           <ul class="md:flex md:justify-evenly">
             <li>
-              <a href='/'>Home</a>
+              <Link to="/" className=''>Home</Link>
             </li>
             <li>
-              <a href='#'>About</a>
+              <Link to="/about-us" className=''>About</Link>
             </li>
             <li>
-              <a href='#'>Reservation</a>
+              <Link to="/book-a-table">Reservation</Link>
             </li>
             <li>
-              <a href='#'>Menu</a>
+              <Link to="/menu" className=''>Menu</Link>
             </li>
             <li>
-              <a href='#'>Order Online</a>
+              <Link to="/order-online" className=''>Order Online</Link>
             </li>
             <li>
-              <a href='#'>Login</a>
+              <Link to="/login" className=''>Login</Link>
             </li>
           </ul>
         </nav>

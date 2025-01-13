@@ -1,4 +1,4 @@
-import Reviews from '../Data/Reviews';
+import Reviews from '../../Data/Reviews';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faStarHalfAlt } from '@fortawesome/free-solid-svg-icons'; // Solid stars and half stars
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'; // Regular (hollow) stars
