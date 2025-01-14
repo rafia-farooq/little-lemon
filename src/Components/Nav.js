@@ -1,5 +1,5 @@
 import Logo from '../assets/icons/logo.svg';
-// for navigation
+// for navigation routing
 import { Link } from 'react-router';
 
 

@@ -1,5 +1,30 @@
-import { useState } from "react";
+import { useState, useReducer } from "react";
 import BookingForm from "./BookingForm";
+
+// Reducer to manage availableTimes
+const timesReducer = (state, action) => {
+    switch (action.type) {
+        case 'SET_TIMES':
+            return action.times;
+        default:
+            return state;
+    }
+};
+
+
+// Initialize times function to create the initial state
+const initializeTimes = () => [
+    '5:00 PM',
+    '5:30 PM',
+    '6:00 PM',
+    '6:30 PM',
+    '7:00 PM',
+    '7:30 PM',
+    '8:00 PM',
+    '9:00 PM',
+    '10:00 PM',
+    '11:00 PM',
+];
 
 function Booking() {
     // State to manage form values and errors
@@ -9,7 +34,7 @@ function Booking() {
         guests: 2,
         occasion: '',
     });
-    
+
     // State to manage error messages
     const [formErrors, setFormErrors] = useState({
         time: '',
@@ -18,20 +43,35 @@ function Booking() {
         occasion: '',
     });
 
-    // Array for available times
-    const [availableTimes] = useState([
-        '5:00 PM',
-        '5:30 PM',
-        '6:00 PM',
-        '6:30 PM',
-        '7:00 PM',
-        '7:30 PM',
-        '8:00 PM',
-        '9:00 PM',
-        '10:00 PM',
-        '11:00 PM',
-    ]);
+    // Reducer to manage availableTimes
+    const [availableTimes, dispatch] = useReducer(timesReducer, [], initializeTimes);
 
+    // Function to update available times based on selected date
+    const updateAvailableTimes = (selectedDate) => {
+        // Include the selected date in the dispatch
+        // Placeholder logic: based on the date, we might update the available times differently
+        const times = selectedDate ? [
+            '5:00 PM',
+            '5:30 PM',
+            '6:00 PM',
+            '6:30 PM',
+            '7:00 PM',
+            '7:30 PM',
+            '8:00 PM',
+            '8:30 PM',
+            '9:00 PM',
+            '9:30 PM',
+            '10:00 PM',
+            '10:30 PM',
+            '11:00 PM',
+        ] : [];
+        // Dispatch the available times with the selected date (can use selectedDate for logic)
+        dispatch({
+            type: 'SET_TIMES',
+            times,
+            selectedDate,  // Include the date in the dispatch
+        });
+    };
     // Handle change for form elements
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -118,6 +158,7 @@ function Booking() {
                             availableTimes={availableTimes}
                             handleChange={handleChange}
                             handleSubmit={handleSubmit}
+                            updateAvailableTimes={updateAvailableTimes} // Pass the function down
                         />
                     </div>
                     <div className="md:col-span-5 mt-14 md:mt-0">
@@ -125,7 +166,7 @@ function Booking() {
                             Your Reservations
                         </h4>
                         <p className="mt-5 text-[#9cab99]">
-                            {formData.date ? `Reservation on ${formData.date} at ${formData.time}` : "It's so empty here. Make a reservation."}
+                            {formData.date && formData.time ? `Reservation on ${formData.date} at ${formData.time}` : "It's so empty here. Make a reservation."}
                         </p>
                     </div>
                 </main>
