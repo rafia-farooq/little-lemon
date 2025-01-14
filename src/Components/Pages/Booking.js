@@ -13,7 +13,8 @@ const timesReducer = (state, action) => {
 
 
 // Initialize times function to create the initial state
-const initializeTimes = () => [
+// exported for testing
+export const initializeTimes = () => [
     '5:00 PM',
     '5:30 PM',
     '6:00 PM',
@@ -51,8 +52,6 @@ function Booking() {
         // Include the selected date in the dispatch
         // Placeholder logic: based on the date, we might update the available times differently
         const times = selectedDate ? [
-            '5:00 PM',
-            '5:30 PM',
             '6:00 PM',
             '6:30 PM',
             '7:00 PM',
@@ -62,7 +61,6 @@ function Booking() {
             '9:00 PM',
             '9:30 PM',
             '10:00 PM',
-            '10:30 PM',
             '11:00 PM',
         ] : [];
         // Dispatch the available times with the selected date (can use selectedDate for logic)
