@@ -6,7 +6,8 @@ import { Route, Routes } from 'react-router';
 import Homepage from './Components/Home/Homepage';
 import AboutUs from './Components/Pages/AboutUs';
 import Menu from './Components/Pages/Menu';
-import Booking from './Components/Pages/Booking';
+import Booking from './Components/Pages/ReserveTable/Booking';
+import ConfirmedBooking from './Components/Pages/ReserveTable/ConfirmedBooking ';
 import OrderOnline from './Components/Pages/OrderOnline';
 import Login from './Components/Pages/Login';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/" element={<Homepage/>}/>
           <Route path="/about-us" element={<AboutUs/>}/>
           <Route path="/book-a-table" element={<Booking/>}/>
+          <Route path="/confirmed-booking" element={<ConfirmedBooking/>}/>
           <Route path="/menu" element={<Menu/>}/>
           <Route path="/order-online" element={<OrderOnline/>}/>
           <Route path="/login" element={<Login/>}/>
@@ -31,3 +33,4 @@ function App() {
 }
 
 export default App;
+

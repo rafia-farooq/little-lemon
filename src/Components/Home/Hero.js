@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
     return (
         <section className="hero py-12 md:h-[500px] lg:h-[450px]">
@@ -8,7 +10,7 @@ const Hero = () => {
               <h4 className="mt-7">We are a family owned Mediterranean restaurant focused on traditional recipes 
                 served with a modern twist.
               </h4>
-              <a href="#" className="button hover:!bg-[#ffe252] shadow-xl my-10">Reserve a Table</a>
+              <Link to="/book-a-table" className="button hover:!bg-[#ffe252] shadow-xl my-10">Reserve a Table</Link>
             </article>
             <article className="md:w-[45%] md:flex md:justify-end lg:h-[70vh]">
                 <img src={require('../../assets/heroImage.jpg')} alt="image of a server carrying a dish" className='w-full h-full object-cover rounded-lg'/>
