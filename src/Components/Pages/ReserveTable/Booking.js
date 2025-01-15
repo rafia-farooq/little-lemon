@@ -135,6 +135,7 @@ function Booking() {
                         availableTimes={availableTimes}
                         handleChange={handleChange}
                         handleSubmit={handleSubmit}
+                        updateAvailableTimes={updateAvailableTimes}
                     />
                 </div>
                 <div className="md:col-span-5 mt-14 md:mt-0">
