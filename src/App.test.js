@@ -10,6 +10,7 @@ test('Correct Booking Form heading', () => {
     expect(headingText).toBeInTheDocument();
 });
 
+
 // Test for initializeTimes function
 // describe('initializeTimes', () => {
 //   it('should return the correct initial available times', () => {
