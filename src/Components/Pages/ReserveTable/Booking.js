@@ -44,7 +44,7 @@ function Booking() {
       <header className="border-b-2 border-yellow-200">
         <h1>Make a Table Reservation</h1>
       </header>
-      <main className="md:grid grid-cols-1 md:grid-cols-12 gap-12 mt-8">
+      <section className="md:grid grid-cols-1 md:grid-cols-12 gap-12 mt-8">
         {/* Booking Form Column (Left) */}
         <div className="md:col-span-6">
           <Formik
@@ -86,11 +86,20 @@ function Booking() {
                   updateAvailableTimes={updateAvailableTimes}
                   setFieldValue={setFieldValue} // Pass setFieldValue to handle custom changes
                 />
+                <div className="mt-4">
+                  {Object.keys(errors).length > 0 && (
+                    <ul className="text-red-500">
+                      {Object.values(errors).map((error, index) => (
+                        <li key={index}>{error}</li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
               </>
             )}
           </Formik>
         </div>
-      </main>
+      </section>
     </div>
   );
 }

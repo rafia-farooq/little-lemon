@@ -1,13 +1,14 @@
 import MenuList from '../../Data/MenuList'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPersonBiking, faCartPlus } from '@fortawesome/free-solid-svg-icons'; // Import the faPersonBiking icon
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   return (
     <section className="py-10 mb-8">
       <div className="md:flex md:justify-between w-3/4 md:my-20 mx-auto">
         <h1>This week's specials!</h1>
-        <a className="hidden button hover:!bg-[#ffe252] shadow-xl">Online Menu</a>
+        <Link to="/menu" className="hidden button hover:!bg-[#ffe252] shadow-xl">Online Menu</Link>
       </div>
       <div className="md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-10 w-3/4 my-4 mx-auto">
         {MenuList.map((item, index) => {
@@ -24,11 +25,10 @@ const Menu = () => {
                 </div>{/*end of wrapper div for name and price*/}
                 <p className='mb-7'>{description}</p>
                 <div className="flex justify-between items-end mt-auto">{/*wrapper div for buttons*/}
-                  <a href="#" className="button-secondary hover:!bg-[#ee9972]">Order Delivery <FontAwesomeIcon icon={faPersonBiking} /></a>
-                  <a href="#" className="button-secondary hover:!bg-[#ee9972]">Add to Cart <FontAwesomeIcon icon={faCartPlus} /></a>
+                  <Link to="/order-online" className="button-secondary hover:!bg-[#ee9972]">Order Delivery <FontAwesomeIcon icon={faPersonBiking} aria-hidden="true"/></Link>
+                  <Link to="#" className="button-secondary hover:!bg-[#ee9972]">Add to Cart <FontAwesomeIcon icon={faCartPlus} aria-hidden="true"/></Link>
                 </div>{/*wrapper div for buttons*/}
               </div>{/*end of wrapper div for content under the image*/}
-              
             </article>
           );
         })}
