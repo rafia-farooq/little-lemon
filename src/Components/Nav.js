@@ -14,7 +14,7 @@ const Nav = () => {
         <nav class="w-1/2">
           <ul class="md:flex md:justify-evenly">
             <li>
-              <Link to="/little-lemon" className=''>Home</Link>
+              <Link to="/" className=''>Home</Link>
             </li>
             <li>
               <Link to="/about-us" className=''>About</Link>
