@@ -13,8 +13,8 @@ const About = () => {
                 </p>
             </artcile>
             <div className="relative w-64 h-64 my-8 md:w-[40%] lg:w-[45%]">
-                <img src={require('../../assets/Mario-and-Adrian A.jpg')} alt="the owners in the kitchen cooking" className="inline w-full h-full absolute top-12 left-12 object-cover z-10 rounded-lg shadow-lg md:ml-10"/>
-                <img src={require('../../assets/Mario and Adrian b.jpg')} alt="the owners in the kitchen laughing" className="inline w-2/3 absolute top-0 left-0 object-cover z-20 rounded-lg shadow-lg"/>
+                <img src={require('../../assets/Mario-and-Adrian A.jpg')} alt="image of the owners in the kitchen cooking" className="inline w-full h-full absolute top-12 left-12 object-cover z-10 rounded-lg shadow-lg md:ml-10"/>
+                <img src={require('../../assets/Mario and Adrian b.jpg')} alt="image of the owners in the kitchen laughing" className="inline w-2/3 absolute top-0 left-0 object-cover z-20 rounded-lg shadow-lg"/>
             </div>
         </section>
     )
