@@ -7,7 +7,7 @@ const Nav = () => {
     return (
       <header class="py-5 md:flex md:justify-between md:items-center w-3/4 my-0 mx-auto">
         <div>
-          <a href="/">
+          <a href="/little-lemon">
             <img src={Logo} alt="logo" />
           </a>
         </div>
