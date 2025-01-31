@@ -7,14 +7,14 @@ const Nav = () => {
     return (
       <header class="py-5 md:flex md:justify-between md:items-center w-3/4 my-0 mx-auto">
         <div>
-          <a href="/">
+          <a href="/little-lemon">
             <img src={Logo} alt="logo" />
           </a>
         </div>
         <nav class="w-1/2">
           <ul class="md:flex md:justify-evenly">
             <li>
-              <Link to="/" className=''>Home</Link>
+              <Link to="/little-lemon" className=''>Home</Link>
             </li>
             <li>
               <Link to="/about-us" className=''>About</Link>
