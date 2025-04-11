@@ -45,8 +45,6 @@ function Booking() {
         <h1>Make a Table Reservation</h1>
       </header>
       <section className="md:grid grid-cols-1 md:grid-cols-12 gap-12 mt-8">
-        {/* Booking Form Column (Left) */}
-        <div className="md:col-span-6">
           <Formik
             initialValues={{
               date: "",
@@ -76,7 +74,9 @@ function Booking() {
           >
             {({ values, handleChange, handleSubmit, errors, touched, setFieldValue }) => (
               <>
-                <BookingForm
+               {/* Booking Form Column (Left) */}
+               <div className="md:col-span-6">
+               <BookingForm
                   availableTimes={availableTimes}
                   handleChange={handleChange}
                   handleSubmit={handleSubmit}
@@ -95,10 +95,21 @@ function Booking() {
                     </ul>
                   )}
                 </div>
+               </div>
+
+                {/* Right Column */}
+                <div className="md:col-span-6">
+                  <h3 className="font-semibold text-lg mb-4">Your Booking Details:</h3>
+                  <div className="bg-gray-100 p-4 rounded shadow-md">
+                    <p><span className="font-medium">Date:</span> {values.date || "Not selected"}</p>
+                    <p><span className="font-medium">Time:</span> {values.time || "Not selected"}</p>
+                    <p><span className="font-medium">Guests:</span> {values.guests}</p>
+                    <p><span className="font-medium">Occasion:</span> {values.occasion || "Not selected"}</p>
+                  </div>
+                </div>
               </>
-            )}
+              )}
           </Formik>
-        </div>
       </section>
     </div>
   );
