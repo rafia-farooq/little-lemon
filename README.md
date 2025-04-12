@@ -29,5 +29,6 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/YOUR_USERNAME/little-lemon.git
 2. **To start the app locally, run:**:
+   ```command line
    npm start
 
